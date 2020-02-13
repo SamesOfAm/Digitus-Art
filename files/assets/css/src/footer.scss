@@ -1,0 +1,159 @@
+@import 'variables';
+
+#footer {
+  height: 650px;
+  background: url("../layout/butterfly.png") no-repeat right/contain;
+  .inside {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    line-height: 1.5em;
+  }
+}
+
+.footer-left {
+  width: 30%;
+}
+
+.footer-logo {
+  height: 110px;
+}
+
+.footer-right {
+  width: 60%;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.footer-claim {
+  height: 110px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  p {
+    margin-top: 40px;
+  }
+}
+
+.footer-right-bottom {
+  display: flex;
+  justify-content: space-between;
+  > div {
+    width: 40%;
+    p {
+      border-bottom: 1px solid $primary-color;
+      padding-bottom: 15px;
+      a {
+        color: #555;
+        text-decoration: none;
+        transition: color 250ms;
+        -webkit-transition: color 250ms;
+        -moz-transition: color 250ms;
+        -o-transition: color 250ms;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  > nav {
+    width: 41%;
+    ul li {
+      position: relative;
+      padding: 16px 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid $primary-color;
+      }
+      a {
+        position: relative;
+        color: #555;
+        text-decoration: none;
+        z-index: 1;
+        transition: color 250ms;
+        -webkit-transition: color 250ms;
+        -moz-transition: color 250ms;
+        -o-transition: color 250ms;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      &.active strong {
+        position: relative;
+        font-weight: normal;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.social-link {
+  position: relative;
+  margin: 2px 0;
+  padding-left: 27px;
+  font-variant: small-caps;
+  a {
+    color: #555;
+    text-decoration: none;
+    transition: color 250ms;
+    -webkit-transition: color 250ms;
+    -moz-transition: color 250ms;
+    -o-transition: color 250ms;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+  }
+  &.instagram:before {
+    background: url("../layout/instagram.svg");
+  }
+  &.facebook:before {
+    background: url("../layout/facebook.svg");
+  }
+  &.youtube:before {
+    background: url("../layout/youtube.svg");
+  }
+  &.xing:before {
+    background: url("../layout/xing.svg");
+  }
+  &.linkedin:before {
+    background: url("../layout/linkedin.svg");
+    width: 25px;
+    height: 25px;
+    left: -2px;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: $smartphone) {
+  #footer {
+    background: none;
+    .inside {
+      display: block;
+    }
+  }
+
+  .footer-left,.footer-right {
+    width: 100%;
+    .ce_image {
+      height: auto;
+    }
+  }
+
+  .footer-claim {
+    display: none;
+  }
+
+  .footer-right-bottom {
+    display: block;
+  }
+
+  .footer-right-bottom > div, .footer-right-bottom > nav {
+    width: 100%;
+  }
+}

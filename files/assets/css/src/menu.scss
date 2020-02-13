@@ -1,0 +1,66 @@
+@import 'variables';
+
+.mobile_menu_trigger {
+  cursor: pointer;
+}
+
+.menu-close {
+  position: absolute;
+  top: 15px;
+  right: 60px;
+  font-size: 70px;
+  transition: text-shadow 250ms;
+  -webkit-transition: text-shadow 250ms;
+  -moz-transition: text-shadow 250ms;
+  -o-transition: text-shadow 250ms;
+  &:hover {
+    text-shadow: 0 0 5px;
+  }
+}
+
+.mobile_menu .inner {
+  background: white;
+  a {
+    color: #555;
+    text-decoration: none;
+  }
+  ul {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    li {
+      padding: 15px 0;
+      text-transform: uppercase;
+      &:not(:last-child) {
+        border-bottom: 1px solid $primary-color;
+      }
+      a {
+        color: #555;
+        text-decoration: none;
+        transition: padding-left 250ms;
+        &:hover {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.mobile_menu .inner .menu-first-list {
+  margin-top: 10vw;
+  li:last-child {
+    border-bottom: 1px solid $primary-color;
+  }
+}
+
+@media screen and (max-width: $smartphone) {
+  .mobile_menu .inner .menu-first-list {
+    margin-top: 25vw;
+  }
+
+  .menu-close {
+    top: 10px;
+    right: 30px;
+    font-size: 65px;
+  }
+}

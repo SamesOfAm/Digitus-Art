@@ -1,0 +1,118 @@
+@import 'variables';
+
+#header {
+  height: 85px;
+  background: rgba(245,130,33,1);
+  background: -moz-linear-gradient(left, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(245,130,33,1)), color-stop(100%, rgba(237,24,71,1)));
+  background: -webkit-linear-gradient(left, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  background: -o-linear-gradient(left, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  background: -ms-linear-gradient(left, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  background: linear-gradient(to right, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58221', endColorstr='#ed1847', GradientType=1 );
+}
+
+.logo-header {
+  position: absolute;
+  z-index: 1;
+  top: -25vw;
+  left: -8vw;
+  width: 35vw;
+  height: 35vw;
+  border-radius: 100%;
+  box-shadow: 0 0 25px rgb(138,194,219);
+  background: white;
+  img {
+    position: absolute;
+    bottom: 11%;
+    right: 26%;
+    max-width: initial;
+    width: 30%;
+  }
+}
+
+.claim {
+  width: 290px;
+  margin-left: 27%;
+  text-transform: uppercase;
+  color: white;
+  p {
+    margin-top: 35px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+  }
+}
+
+.mobile_menu_trigger {
+  position: absolute;
+  right: 5vw;
+  top: 25px;
+  width: 40px;
+}
+
+.mod_changelanguage {
+  position: absolute;
+  right: 200px;
+  top: 10px;
+  li a span img {
+    width: 34px;
+  }
+}
+
+
+@media screen and (max-width: $smartphone) {
+  #header {
+    position: relative;
+    height: auto;
+    background: white;
+    z-index: 1;
+    .claim {
+      width: 90%;
+      margin: 10px auto 0;
+      color: black;
+      text-align: center;
+      border-top: 1px solid #cecece;
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+  .logo-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: auto;
+    padding-top: 20px;
+    background: white;
+    box-shadow: none;
+    border-radius: 0;
+    img {
+      position: relative;
+      bottom: initial;
+      right: initial;
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .mobile_menu_trigger {
+    top: 20%;
+    right: 5%;
+    width: initial;
+    img {
+      width: 35px;
+      max-width: initial;
+      height: 35px;
+    }
+  }
+
+  .mod_changelanguage {
+    right: 20%;
+    top: 20%;
+    ul {
+      margin: 0;
+    }
+  }
+}

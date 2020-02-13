@@ -1,0 +1,39 @@
+<div class="event layout_full block<?= $this->class ?>">
+    <?php if ($this->addImage): ?>
+        <?php $this->insert('image', $this->arrData); ?>
+    <?php endif; ?>
+    <a href="{{link_url::5}}#<?= $this->alias ?>">
+        <div class="referenz-card">
+            <h3 itemprop="name"><?= $this->title ?></h3>
+
+            <?php if ($this->recurring): ?>
+                <p class="recurring"><?= $this->recurring ?><?php if ($this->until) echo ' ' . $this->until; ?>.</p>
+            <?php endif; ?>
+
+            <div class="ce_text block">
+                <?php if (!$this->addBefore): ?>
+                    <?= $this->teaser ?>
+                <?php endif; ?>
+
+                <?php if ($this->addBefore): ?>
+                    <?= $this->teaser ?>
+                <?php endif; ?>
+            </div>
+            <?php if ($this->hasDetails): ?>
+                <p class="more"><a href="<?= $this->href ?>" title="<?= $this->readMore ?>"<?= $this->target ?> itemprop="url"><?= $this->more ?><span class="invisible"> <?= $this->link ?></span></a></p>
+            <?php endif; ?>
+        </div>
+    </a>
+
+    <?php if ($this->enclosure): ?>
+        <ul class="enclosure">
+            <?php foreach ($this->enclosure as $enclosure): ?>
+                <li class="download-element ext-<?= $enclosure['extension'] ?>">
+                    <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+
+</div>

@@ -1,0 +1,47 @@
+@import 'variables';
+
+body {
+  color: #555;
+  font-family: 'Merriweather', serif;
+  padding-bottom: 50px;
+  background: rgba(245,130,33,1);
+  background: -moz-linear-gradient(left, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(245,130,33,1)), color-stop(100%, rgba(237,24,71,1)));
+  background: -webkit-linear-gradient(left, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  background: -o-linear-gradient(left, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  background: -ms-linear-gradient(left, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  background: linear-gradient(to right, rgba(245,130,33,1) 0%, rgba(237,24,71,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58221', endColorstr='#ed1847', GradientType=1 );
+}
+
+div,a {
+  outline: none;
+}
+
+#wrapper {
+  background-color: white;
+  box-shadow: 0 0 15px #4d4d4d;
+}
+
+#container {
+}
+
+ul {
+  list-style: none;
+  margin: 15px 0 0;
+  padding: 0;
+}
+
+@media screen and (max-width: $smartphone) {
+  body {
+    background: white;
+  }
+  #wrapper{
+    box-shadow: none;
+  }
+}
+
+@import 'header';
+@import 'footer';
+@import 'main';
+@import 'menu';

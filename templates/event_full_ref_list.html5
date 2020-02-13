@@ -1,0 +1,13 @@
+<div class="event layout_full block<?= $this->class ?>">
+		<?php if ($this->addImage): ?>
+		<?php $this->insert('image', $this->arrData); ?>
+		<?php endif; ?>
+		<a href="<?= $this->href ?>">
+			<div class="referenz-overlay">
+				<h4 itemprop="name"><?= $this->title ?></h4>
+				<div class="ce_text block">
+				    <?= $this->teaser ?>
+				</div>
+			</div>
+		</a>
+</div>
