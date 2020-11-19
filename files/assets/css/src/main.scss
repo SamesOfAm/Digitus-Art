@@ -377,7 +377,7 @@ h4 {
   display: none;
 }
 
-#zielgruppen,#eva,#who-we-work-for {
+#eva,#who-we-work-for {
   margin-top: 80px;
   overflow: visible;
 }
@@ -619,6 +619,10 @@ h4 {
   cursor: pointer;
   font-size: 30px;
   color: $primary-color;
+}
+
+#zielgruppen h3 {
+  margin-top: 0;
 }
 
 @media screen and (max-width: $tablet) {

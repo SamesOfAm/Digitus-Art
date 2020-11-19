@@ -38,10 +38,12 @@
                 let moodImageTop = document.querySelector('.mood-image').offsetTop;
                 let scrolling = jQuery(window).scrollTop();
                 let currentWindowHeight = jQuery(window.top).height();
-                let eva = document.getElementById('eva').children[0];
-                let evaTop = eva.offsetTop;
+                if(document.getElementById('eva')) {
+                    let eva = document.getElementById('eva').children[0];
+                    let evaTop = eva.offsetTop;
+                    eva.style.top = -(scrolling + (currentWindowHeight/3) - evaTop)*0.2 + 'px';
+                }
                 overlay.style.top = -(scrolling + currentWindowHeight - moodImageTop)*0.8 + 'px';
-                eva.style.top = -(scrolling + (currentWindowHeight/3) - evaTop)*0.2 + 'px';
             });
         });
         jQuery('#funding-image').on("load", function(){
