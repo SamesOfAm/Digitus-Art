@@ -1,0 +1,5 @@
+<?php if (count($this->data)): ?>
+
+<?php echo $this->data[0]['raw']['name']; ?>
+
+<?php endif; ?>
