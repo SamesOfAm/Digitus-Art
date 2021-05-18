@@ -504,7 +504,6 @@ h4 {
 }
 
 #main #referenzen-list .ce_text ul {
-  margin-top: 60px;
   margin-left: 20px;
     li:before {
      color: white;
@@ -512,6 +511,8 @@ h4 {
 }
 
 .referenz-overlay {
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   top: 0;
   left: 0;
@@ -533,6 +534,9 @@ h4 {
   -webkit-transition: opacity 250ms;
   -moz-transition: opacity 250ms;
   -o-transition: opacity 250ms;
+  h4 {
+    align-self: start;
+  }
 }
 
 #project {
