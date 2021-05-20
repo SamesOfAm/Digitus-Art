@@ -386,7 +386,7 @@ h4 {
   position: relative;
 }
 
-#main #referenzen-detail {
+#main #referenzen-detail, #main .mod_newsreader {
   margin-top: -30px;
   .event {
     width: 100%;
@@ -543,7 +543,7 @@ h4 {
   position: relative;
 }
 
-#referenzen-detail .event {
+#referenzen-detail .event, .mod_newsreader .layout_full {
   padding-top: calc(100vw/3.15789);
   .detail-header {
     position: absolute;
@@ -814,7 +814,7 @@ h4 {
     padding: 10px 0;
   }
 
-  #main #referenzen-detail {
+  #main #referenzen-detail, #main .mod_newsreader {
     margin-top: -15px;
   }
 
